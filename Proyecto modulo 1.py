@@ -206,6 +206,3 @@ print("1.-squirtle\n2.-charmander \n3.-bulbasaur")
 
 pokemon_elegido= input()
 pokemon_Elegir(pokemon_elegido)
-#squirtle.pelea(charmander)
-#squirtle.centro_pokemon()
-#charmander.centro_pokemon()
