@@ -50,7 +50,21 @@ class Item:
             return False
 
     def __repr__(self):
-        return f"Item('{self.name}',{self.price},{self.quantity})"
+        return f"{self.__class__.__name__}('{self.name}',{self.price},{self.quantity})"
 
 Item.instantiate_from_csv()
 print(Item.is_integer(7.4))
+
+class Phone(Item):
+    def __init__(self,name: str,price: float,quantity=0, broken_phones=0):
+        super().__init__(name,price,quantity)
+
+        assert broken_phones >=0, f"Broken Phones {broken_phones} is not grater than zero0"
+       
+    
+
+phone1= Phone("jscPhonev10",500,5,1)
+phone2= Phone("jscPhonev20", 700, 5,1)
+
+print(Item.all)
+print(Phone.all)
