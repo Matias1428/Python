@@ -1,11 +1,13 @@
-import csv
+import imp
+from item import Item
+from phone import Phone
 
-class Item:...
+Item.instantiate_from_csv()
+print(Item.all)
 
-class Phone(Item):
-    pass
 
-phone1= Phone("jscPhonev10",500,5)
-phone1.broken_phones=1
-phone2= Phone("jscPhonev20", 700, 5)
-phone2.broken_phones=1
+item1=Item("Muy", 750)
+
+
+item1.name="otherName"
+print(item1.name)
