@@ -11,28 +11,39 @@ class Item:
         
         print("I am created!")
         #Assign to self object
-        self.name=name
-        self.price=price
+        self.__name=name
+        self.__price=price
         self.quantity=quantity
 
         #Actions to execute
         Item.all.append(self)
+    
     @property
     # Property decorator = Read- Only Attribute
     def name(self):
         return self.__name
+    
     @name.setter
     def name(self, value):
         if len(value)>10:
             raise Exception("The name is too long")
         else:
             self.__name=value
+    
+    @property
+    def price(self):
+        return self.__price
+    
+
 
     def calculate_total_price(self):
-        return self.price*self.quantity
+        return self.__price*self.quantity
 
     def apply_discount(self):
-        self.price=self.price*self.pay_rate
+       self.__price=self.price*self.pay_rate
+    
+    def apply_increment(self,increment):
+       self.__price=self.price*self.price*increment
 
     #Class method
     @classmethod     
