@@ -1,3 +1,3 @@
 # Errors and Exceptions
-a=5 
-print(a)
+x=-5
+assert(x>=0), 'x is no positive'
