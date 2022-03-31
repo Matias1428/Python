@@ -1,6 +1,8 @@
 from asyncio.log import logger
 import logging
+from pickle import FALSE
 logger=logging.getLogger(__name__)
+logger.propagate=False
 logger.info('hello from helper')
 
 #logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',  datefmt='%m/%d/%Y %H:%M:%S')
