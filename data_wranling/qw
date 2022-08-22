@@ -1,0 +1,4 @@
+INSERT INTO projects(title) values ("Proy1")
+INSERT INTO projects(title) values ("Proy2")
+INSERT INTO tasks (project_id, description) values (1,"task #1")
+INSERT INTO tasks (project_id, description) values (1,"task ejemplo 1")
